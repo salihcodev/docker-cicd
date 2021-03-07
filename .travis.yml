@@ -6,4 +6,4 @@ before_install:
   - docker build -t salihcodev/docker-cicd -f Dockerfile.dev .
 
 script:
-  - docker run salihcodev/docker-cicd yarn test -- --coverage
+  - docker run -e CI=true  salihcodev/docker-cicd yarn test
